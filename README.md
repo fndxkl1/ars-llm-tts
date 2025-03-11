@@ -16,7 +16,6 @@ ars-llm-tts/
 │   ├── asr.py          # 语音识别模块
 │   └── tts.py          # 语音合成模块
 ├── models/             # 模型存储目录
-│   └── Qwen2.5-0.5B-Instruct/
 ├── requirements.txt    # 项目依赖
 └── main.py            # 主程序入口
 ```
