@@ -8,7 +8,7 @@ class ChatAssistant:
         # 模型下载
         model_dir = snapshot_download(
             "Qwen/Qwen2.5-0.5B-Instruct",
-            cache_dir="models/Qwen2.5-0.5B-Instruct"
+            cache_dir=os.path.join(os.path.dirname(os.path.dirname(__file__)), "models/Qwen2.5-0.5B-Instruct")
         )
         
         # 模型初始化
@@ -37,3 +37,4 @@ class ChatAssistant:
             max_new_tokens=100
         )
         return self.tokenizer.decode(outputs[0][len(model_inputs.input_ids[0]):], skip_special_tokens=True)
+
